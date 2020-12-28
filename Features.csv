@@ -1,5 +1,3 @@
-Features axtracted from picture,,,,,,,
-,,,,,,,
-SumDiagOne(),AvgDiagOne(),SumDiagTwo(),AvgDiagTwo(),AvgFirstThirtyCols(),AvgLastThirtyCols(),AvgFirstThirtyRows(),AvgLastThirtyRows()
-,,,,,,,
-255,2.55,255,2.55,2.548,2.547666667,8.484333333,4.480666667
+Features axtracted from picture
+SumDiagOne(),AvgDiagOne(),SumDiagTwo(),AvgDiagTwo(),AvgFirstThirtyCols(),AvgLastThirtyCols(),AvgFirstThirtyRows(),AvgLastThirtyRows()
+17903,179.03,17886,178.86,206.88533333333334,137.646,195.61733333333333,171.16833333333332

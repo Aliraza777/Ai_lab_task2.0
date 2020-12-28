@@ -27,22 +27,21 @@ def whatItDoes(img):
 def Diagalone(img):
     sum = 0
     for j in range(100):
-        if(img[j][j]!='nan'):
+        if(img[j][j] != 'nan'):
             sum += img[j][j]
-
-        avgofDiagOne = sum / 100
-        return sum , avgofDiagOne
+            
+    avgofDiagOne = sum / 100
+    return sum , avgofDiagOne
 
 #~~~~~~sum and Average of Diagonal Two
 def DiagalTwo(img):
     sum = 0
     for j in range(100):
-
         if(img[j][99-j]!='nan'):
             sum += img[j][99-j]
-
-        avgofDiagTwo = sum / 100
-        return sum , avgofDiagTwo
+            
+    avgofDiagTwo = sum / 100
+    return sum , avgofDiagTwo
 
 
 #~~~~~~sum and Average of first Thirty columns
@@ -53,7 +52,7 @@ def avgFirstThirtyCols(img):
             if(img[i][j]!='nan'):
                 sum += img[i][j]
 
-        return sum , sum/3000
+    return sum , sum/3000
 
 #~~~~~~sum and Average of last Thirty columns
 def avgLastThirtyCols(img):
@@ -63,7 +62,7 @@ def avgLastThirtyCols(img):
             if(img[i][j+70]!='nan'):
                 sum += img[i][j+70]
 
-        return sum , sum/3000
+    return sum , sum/3000
 
 #~~~~~~sum and Average of first Thirty Rows
 def avgFirstThirtyRows(img):
@@ -73,7 +72,7 @@ def avgFirstThirtyRows(img):
             if(img[i][j]!='nan'):
                 sum += img[i][j]
 
-        return sum , sum/3000
+    return sum , sum/3000
 
 #~~~~~~sum and Average of last Thirty columns
 def avgLastThirtyRows(img):
@@ -83,12 +82,12 @@ def avgLastThirtyRows(img):
             if(img[i][j]!='nan'):
                 sum += img[i+70][j]
 
-        return sum , sum/3000
+    return sum , sum/3000
 
 
 if __name__ == '__main__':
     
-    # cv2.imshow('Apple' , img)
+    cv2.imshow('Apple' , img)
     sumdiag1 , Avgdiag1 = Diagalone(img)
     sumdiag2 , Avgdiag2 = DiagalTwo(img)
     sumfirst30cols , avgfirst30cols = avgFirstThirtyCols(img)
@@ -107,6 +106,16 @@ if __name__ == '__main__':
     avgl30cols = "AvgLastThirtyCols()"
     avgf30rows = "AvgFirstThirtyRows()"
     avgl30rows = "AvgLastThirtyRows()"
+
+    print(f"{sum1} --------------> {sumdiag1}")
+    print(f"{avg1} --------------> {Avgdiag1}")
+    print(f"{sum2} --------------> {sumdiag2}")
+    print(f"{avg2} --------------> {Avgdiag2}")
+    print(f"{avgf30cols} ----------> {avgfirst30cols}")
+    print(f"{avgl30cols} ----------> {avglast30cols}")
+    print(f"{avgf30rows} ----------> {avgfirst30rows}")
+    print(f"{avgl30rows} ----------> {avglast30rows}")
+    
 
     with open('Features.csv' , mode='w') as features:
         features_writer = csv.writer(features , delimiter = ',')
